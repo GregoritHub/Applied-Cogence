@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Applied Cogency Study Calendar</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-pFl1nYVi4p7q+HPkgK1mt/tG3chFXSjEKojCqKrJUJKclsmj1dRQXpg05hun7kC8"
+      crossorigin="anonymous"
+    />
+    <!-- FullCalendar CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#overview">Applied Cogency</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+            <li class="nav-item"><a class="nav-link" href="#calendar-section">Calendar</a></li>
+            <li class="nav-item"><a class="nav-link" href="#yearly-breakdown">Yearly Breakdowns</a></li>
+            <li class="nav-item"><a class="nav-link" href="#cadence">Cadence</a></li>
+            <li class="nav-item"><a class="nav-link" href="#metrics">Metrics</a></li>
+            <li class="nav-item"><a class="nav-link" href="#failures">Failure Controls</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gatekeeping">Gatekeeping</a></li>
+            <li class="nav-item"><a class="nav-link" href="#proof">Proof of Learning</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tooling">Tooling</a></li>
+            <li class="nav-item"><a class="nav-link" href="#prompts">Self‑Calibration</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Main content container -->
+    <div class="container" style="padding-top: 5rem">
+      <!-- Overview Section -->
+      <section id="overview" class="content-section">
+        <h2>Seven‑Year Arc Overview</h2>
+        <p>
+          The Applied Cogency program unfolds across seven years.  Each year
+          cycles through the four quadrants — <strong>I</strong> (Authentic
+          Resonance), <strong>We</strong> (Moral Truth), <strong>It</strong>
+          (Aesthetic Truth), and <strong>Its</strong> (Semantic Truth).
+          After the first cycle the quadrants return at increasingly
+          sophisticated resolutions.  All deliverables, metrics and failure
+          controls are hard‑wired to prevent drift.
+        </p>
+        <!-- Timeline illustrating the seven years -->
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Year 1 – Foundation</h3>
+            <p>
+              Breadth and scaffolding: Authentic Resonance, Moral Truth,
+              Aesthetic Truth, Semantic Truth.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h3>Year 2 – Operation</h3>
+            <p>Function dynamics, virtue habituation, feedback.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Year 3 – Mechanism</h3>
+            <p>Models, techniques and repeatable craft.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Year 4 – Expression</h3>
+            <p>First full stack of practice in each quadrant.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Year 5 – Consolidation</h3>
+            <p>Deepening with advanced texts and paid/library sources.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Year 6 – Synthesis</h3>
+            <p>Cross‑quadrant problems pairing authority with symbol and form with justice.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Year 7 – Transmission</h3>
+            <p>Teaching, codifying and reducing the practice to methods.</p>
+          </div>
+        </div>
+        <p>
+          This site serves as your single hub for what to study, how to study
+          it, when to do it, why it matters, and how to measure your progress
+          along the way.
+        </p>
+      </section>
+      <!-- Calendar Section -->
+      <section id="calendar-section" class="content-section">
+        <h2>Interactive Calendar</h2>
+        <p>
+          Click any quarter or deliverable on the calendar to view its
+          resources, tasks, due dates and purpose.  Use the checkboxes in the
+          detail panel to log your progress.  Your completion state is saved
+          locally in your browser.
+        </p>
+        <div id="calendar"></div>
+      </section>
+      <!-- Yearly Breakdown Section -->
+      <section id="yearly-breakdown" class="content-section">
+        <h2>Yearly & Quarterly Breakdowns</h2>
+        <p>
+          Each year is broken into four quarters (except where noted).  The
+          details below are mirrored in the calendar view.
+        </p>
+        <!-- Year 1 -->
+        <h3>Year 1 — Foundation</h3>
+        <ul>
+          <li><strong>Q1 Authentic Resonance:</strong> SEP/IEP entries; Jung Platform; MDR; dream journal daily; 12 typed summaries; 4 active‑imagination transcripts. <em>Why:</em> establish personal resonance and self‑awareness.</li>
+          <li><strong>Q2 Moral Truth:</strong> John; Romans 1–12; Athanasius; Augustine VIII & XIX; Aquinas I (selected); 12 moral case briefs; service hours ≥20. <em>Why:</em> ground moral understanding in classical texts.</li>
+          <li><strong>Q3 Aesthetic Truth:</strong> Plato Symposium/Philebus; Plotinus I.6; Aquinas ST I Q5/Q39; Kant §§1–22; 12 object sketches; 4 museum studies. <em>Why:</em> explore beauty and form.</li>
+          <li><strong>Q4 Semantic Truth:</strong> Bertalanffy excerpts; Wiener ch.1–3; Bateson essays; Foerster; 2 small data models; 1 interface wireframe. <em>Why:</em> introduce systems thinking.</li>
+        </ul>
+        <!-- Year 2 -->
+        <h3>Year 2 — Operation</h3>
+        <ul>
+          <li><strong>Q1:</strong> Jung’s <em>Psychological Types</em> I–XI; 8‑function map (own + 3 interlocutors); weekly dream‑type correlation; Beebe/von Franz selections. <em>Why:</em> operationalize psychological functions.</li>
+          <li><strong>Q2:</strong> Aristotle <em>Nicomachean Ethics</em> I–II, III–V, X; Aquinas I–II Q55–70; habit protocol (2 virtues, micro‑drills, weekly examen); 8 dilemma write‑ups. <em>Why:</em> habituate virtues.</li>
+          <li><strong>Q3:</strong> Kant §§30–60; Ruskin; SEP “Aesthetic Judgment”; 4 formal critiques; typographic drills (spacing, grids); 1 poster system. <em>Why:</em> refine aesthetic judgment.</li>
+          <li><strong>Q4:</strong> Wiener ch.4–8; Ashby <em>Introduction to Cybernetics</em>; Shannon paper; Beer lectures; build 1 feedback loop in code; run 2 usability tests. <em>Why:</em> implement cybernetic feedback.</li>
+        </ul>
+        <!-- Year 3 -->
+        <h3>Year 3 — Mechanism</h3>
+        <ul>
+          <li><strong>Q1:</strong> Socionics (Augusta → Gulenko); Model A; intertype relations; type‑interview 10 people; write 20‑page synthesis. <em>Why:</em> mechanize typological models.</li>
+          <li><strong>Q2:</strong> Applied ethics frameworks (Markkula → SEP domain entries); Sandel lectures; 6 case memos (bio/war/tech/env/business/privacy). <em>Why:</em> apply ethical techniques.</li>
+          <li><strong>Q3:</strong> Typography/Design (Müller‑Brockmann → Tschichold → Lupton); grid library; type scale; publish 12‑page booklet. <em>Why:</em> craft design mechanisms.</li>
+          <li><strong>Q4:</strong> UX/IA (Garrett abridged → NNGroup guides; Krug; Norman revised); 1 research study (n ≥ 8); card‑sort; IA tree; interactive prototype. <em>Why:</em> build UX mechanisms.</li>
+        </ul>
+        <!-- Year 4 -->
+        <h3>Year 4 — Expression</h3>
+        <ul>
+          <li><strong>I – Typological Practice:</strong> offer 10 pro‑bono sessions; keep consented notes; record outcome measures; counter‑transference log. <em>Why:</em> express typology in practice.</li>
+          <li><strong>We – Governance Survey:</strong> Plato → Federalist → UDHR; write 3 policy briefs (1 200 words each) with virtue‑analysis rubric; run 2 dialogue circles. <em>Why:</em> express moral governance.</li>
+          <li><strong>It – Designed Artifact:</strong> build a small type system (PDF + web); gather open critique; release a version 2 with revisions; document rationale. <em>Why:</em> express aesthetic design.</li>
+          <li><strong>Its – Interface/Comms System:</strong> release a v1 productised tool (docs + onboarding); collect telemetry; iterate twice. <em>Why:</em> express semantic systems.</li>
+        </ul>
+        <!-- Year 5 -->
+        <h3>Year 5 — Consolidation</h3>
+        <ul>
+          <li><strong>I:</strong> CW9i <em>Archetypes</em>; sample <em>Mysterium Coniunctionis</em>; von Franz or Hillman; conduct 2 symbol studies with amplification. <em>Why:</em> deepen archetypal understanding.</li>
+          <li><strong>We:</strong> Aquinas I–II Q90–97; O’Donovan <em>Resurrection & Moral Order</em> or Ratzinger <em>Introduction to Christianity</em>; write 1 moral ontology essay. <em>Why:</em> consolidate moral depth.</li>
+          <li><strong>It:</strong> Balthasar Vol. I or Gilson; Heidegger essay; write 1 curatorial essay aligning beauty/being; produce photo series as accompaniment. <em>Why:</em> deepen aesthetic philosophy.</li>
+          <li><strong>Its:</strong> Rosenfeld/Morville & Arango; Cooper; Young; ship an IA for a real domain; run 1 longitudinal study (n ≥ 12, 6 weeks). <em>Why:</em> consolidate information architecture.</li>
+        </ul>
+        <!-- Year 6 -->
+        <h3>Year 6 — Synthesis</h3>
+        <ul>
+          <li><strong>Theme A (Authority & Symbol):</strong> pair CW14 passages with constitutional design; write a 25‑page white paper; host a seminar with peers. <em>Why:</em> synthesise authority across quadrants.</li>
+          <li><strong>Theme B (Form & Justice):</strong> pair type/space decisions with procedural fairness; create a digital artifact; conduct an ethical audit. <em>Why:</em> synthesise form and justice.</li>
+        </ul>
+        <!-- Year 7 -->
+        <h3>Year 7 — Transmission</h3>
+        <ul>
+          <li><strong>Teach & Codify:</strong> teach a short course per quadrant (4 × 90 min); publish notes and templates; compile a methods handbook (typology intake, virtue drill sheets, design grids, IA checklists); release versioned edition. <em>Why:</em> transmit knowledge and codify methods.</li>
+        </ul>
+      </section>
+      <!-- Cadence Section -->
+      <section id="cadence" class="content-section">
+        <h2>Cadence (Non‑Negotiable)</h2>
+        <p>
+          To maintain momentum and integrate learning into daily life, the following rhythm is mandatory.  All events below should be added to your personal calendar via the interactive calendar above.
+        </p>
+        <h3>Weekly</h3>
+        <ul>
+          <li>5 focused reading blocks × 90 min (Mon–Fri)</li>
+          <li>3 making blocks × 120 min (design/code/write)</li>
+          <li>1 ethics drill (case brief or service hour)</li>
+          <li>Dream log daily; 1 analysis session per week</li>
+        </ul>
+        <h3>Monthly</h3>
+        <ul>
+          <li>1 public artifact (essay, layout, prototype, or case memo)</li>
+          <li>1 critique session with an external practitioner</li>
+          <li>1 dialogue circle or mentoring hour</li>
+        </ul>
+        <h3>Quarterly</h3>
+        <ul>
+          <li>Capstone per quadrant: a shipped piece with acceptance criteria</li>
+          <li>Retrospective: 2 pages – what changed in your judgments, images, and interfaces</li>
+        </ul>
+      </section>
+      <!-- Metrics Section -->
+      <section id="metrics" class="content-section">
+        <h2>Metrics (Leading Indicators)</h2>
+        <p>
+          These dashboards help you track whether you are on pace to meet the
+          learning objectives.  Progress is aggregated from the tasks you
+          complete in the calendar.  Aim to meet or exceed each threshold.
+        </p>
+        <h3>I – Authentic Resonance</h3>
+        <ul>
+          <li>Dream‑to‑day motif concordance ≥ 40 % (coded themes)</li>
+          <li>Correct type predictions in blind assessments ≥ 70 % after Year 2</li>
+          <li>Counter‑transference identification latency < 24 h</li>
+        </ul>
+        <div class="progress" id="progress-year1">
+          <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+        </div>
+        <h3>We – Moral Truth</h3>
+        <ul>
+          <li>Case‑to‑principle mapping accuracy ≥ 80 % vs expert rubric</li>
+          <li>Virtue drill adherence ≥ 85 % sessions; moral “reversals” self‑reported and traced to antecedents</li>
+          <li>Service hours ≥ 8 per quarter with reflection logs</li>
+        </ul>
+        <div class="progress" id="progress-year2">
+          <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+        </div>
+        <h3>It – Aesthetic Truth</h3>
+        <ul>
+          <li>Passed peer grid/aesthetics checks with &lt; 3 critical faults per deliverable by Year 3</li>
+          <li>Artifact revision cycles ≤ 2 to reach publishable quality</li>
+        </ul>
+        <div class="progress" id="progress-year3">
+          <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+        </div>
+        <h3>Its – Semantic Truth</h3>
+        <ul>
+          <li>Task success (first‑time users) ≥ 80 %</li>
+          <li>SUS ≥ 75 by second iteration</li>
+          <li>Model change requests per release trending down (stability ↑)</li>
+        </ul>
+        <div class="progress" id="progress-year4">
+          <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+        </div>
+        <h3>Year 5 Progress</h3>
+        <div class="progress" id="progress-year5">
+          <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+        </div>
+        <h3>Year 6 Progress</h3>
+        <div class="progress" id="progress-year6">
+          <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+        </div>
+        <h3>Year 7 Progress</h3>
+        <div class="progress" id="progress-year7">
+          <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+        </div>
+      </section>
+      <!-- Failure Controls Section -->
+      <section id="failures" class="content-section">
+        <h2>Failure Modes & Controls</h2>
+        <p>
+          To keep yourself aligned with the programme’s intentions, regularly
+          audit against the following failure modes.  Each control is built
+          into the cadence and calendar alerts.
+        </p>
+        <ul>
+          <li><strong>Enantiodromia (over‑correction into opposite):</strong> tally your time per quadrant weekly; if any quadrant exceeds 45 % for three weeks, force the next week to favour the neglected one.</li>
+          <li><strong>Inflation via archetypal identification:</strong> work under external supervision for typological practice; document projections; apply amplification before advice.</li>
+          <li><strong>Ethical performativity without interiority:</strong> conduct hidden‑curriculum audits – track when choices are driven by optics; write a conscience‑based justification.</li>
+          <li><strong>Aesthetic fetishism (form over truth):</strong> embed a “communicative sufficiency” test – if usability or comprehension < 70 %, design work is rejected regardless of beauty.</li>
+          <li><strong>Systems drift (clever models, bad reality):</strong> red‑team your information architecture quarterly with naïve users; accept only failures that improve instruction clarity.</li>
+        </ul>
+      </section>
+      <!-- Gatekeeping Section -->
+      <section id="gatekeeping" class="content-section">
+        <h2>Reading/Budget Gatekeeping</h2>
+        <p>
+          Always exhaust the free corpus before moving to paid texts.  Only when
+          metrics plateau for six weeks or a concrete question demands depth
+          should you purchase or borrow the next layer.
+        </p>
+        <ul>
+          <li><strong>I:</strong> CW6 → CW9i → MDR → CW14 selections; then von Franz or Hillman.</li>
+          <li><strong>We:</strong> Aquinas I–II, then O’Donovan/Ratzinger; add Hart/Wright if metaphysical scope is required.</li>
+          <li><strong>It:</strong> Bringhurst → Lupton → Balthasar or Heidegger per inquiry.</li>
+          <li><strong>Its:</strong> Krug → Rosenfeld/Morville → Cooper → Covert/Young.</li>
+        </ul>
+      </section>
+      <!-- Proof of Learning Section -->
+      <section id="proof" class="content-section">
+        <h2>Proof of Learning (Annual Milestones)</h2>
+        <p>
+          These deliverables anchor your mastery at the end of each year.  Use the upload features in your chosen storage to collect files and artefacts.
+        </p>
+        <ul>
+          <li><strong>Year 1:</strong> Portfolio with 12 artifacts + 12 summaries + 6 case briefs.</li>
+          <li><strong>Year 2:</strong> Function‑ethics‑form triad dossier (30–50 pages).</li>
+          <li><strong>Year 3:</strong> Mechanism bundle: Model A report, applied ethics set, type booklet, UX study.</li>
+          <li><strong>Year 4:</strong> Expression stack shipped (practice, policy, artifact, interface).</li>
+          <li><strong>Year 5:</strong> Depth essays × 2 + advanced product IA.</li>
+          <li><strong>Year 6:</strong> Two synthesis works.</li>
+          <li><strong>Year 7:</strong> Methods handbook v1.0 + four recorded lectures.</li>
+        </ul>
+      </section>
+      <!-- Tooling Section -->
+      <section id="tooling" class="content-section">
+        <h2>Minimal Tooling</h2>
+        <p>
+          The following tools and templates support efficient execution.  Use
+          them as starting points and customise them as you grow more
+          proficient.
+        </p>
+        <ul>
+          <li><strong>Zettelkasten:</strong> ID system and link discipline for notes.</li>
+          <li><strong>Design stack:</strong> grid templates; type tester; baseline grid document.</li>
+          <li><strong>Research stack:</strong> consent form; screener; protocol; template report.</li>
+          <li><strong>Ethics templates:</strong> Markkula‑style worksheet; case memo boilerplate.</li>
+        </ul>
+      </section>
+      <!-- Self‑Calibration Prompts Section -->
+      <section id="prompts" class="content-section">
+        <h2>Periodic Self‑Calibration Prompts</h2>
+        <p>
+          Ask yourself these questions regularly to remain balanced and to spot
+          emerging blind spots.
+        </p>
+        <ul>
+          <li><strong>I:</strong> “What compensates my one‑sidedness this month? What new symbol is asking for form?”</li>
+          <li><strong>We:</strong> “Which virtue actually moved a decision? Which vice is rationalised as ‘strategy’?”</li>
+          <li><strong>It:</strong> “What proportion decision improved comprehension? What beauty tempted falsity?”</li>
+          <li><strong>Its:</strong> “Where did feedback reduce uncertainty? Which control loop is missing?”</li>
+        </ul>
+      </section>
+    </div>
+    <!-- Modal for event details -->
+    <div
+      class="modal fade"
+      id="eventModal"
+      tabindex="-1"
+      aria-labelledby="eventModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="eventModalLabel">Event Details</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h4 id="eventTitle"></h4>
+            <p><strong>Due:</strong> <span id="eventDue"></span></p>
+            <p><strong>Purpose:</strong> <span id="eventWhy"></span></p>
+            <p><strong>Resources:</strong></p>
+            <ul id="eventResources"></ul>
+            <p><strong>Tasks:</strong></p>
+            <ul id="eventTasks" class="checklist"></ul>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                id="eventProgressBar"
+                role="progressbar"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      &copy; <span id="currentYear"></span> Applied Cogency Study Calendar
+    </footer>
+    <!-- Bootstrap JS (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-3SKjaSoHhNVTVzQ+gIrRyqiT9oqlhK7qRR3YKHyCuHBAQ0L8vabexv3mRfx8E84f"
+      crossorigin="anonymous"
+    ></script>
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+/*
+ * Applied Cogency Study Calendar
+ *
+ * This stylesheet defines a neutral colour palette and typographic
+ * system for the calendar.  It extends Bootstrap’s defaults with
+ * custom variables and minimal tweaks, favouring clarity and
+ * readability.  Feel free to customise the variables at the top to
+ * adjust the overall look and feel.
+ */
+
+/* Colour variables */
+:root {
+  --primary-hue: 214;
+  --primary-saturation: 61%;
+  --primary-lightness: 45%;
+  --primary: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+  --primary-light: hsl(var(--primary-hue), var(--primary-saturation), calc(var(--primary-lightness) + 20%));
+  --primary-dark: hsl(var(--primary-hue), var(--primary-saturation), calc(var(--primary-lightness) - 10%));
+
+  --background: #fafafa;
+  --surface: #ffffff;
+  --text-colour: #303030;
+  --subtle-text: #666666;
+  --border-colour: #e0e0e0;
+  --accent: hsl(var(--primary-hue), 80%, 70%);
+}
+
+body {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  color: var(--text-colour);
+  background-color: var(--background);
+  line-height: 1.5;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--surface);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-colour);
+  margin-right: 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary);
+}
+
+/* Section headings */
+h2, h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+/* Content cards */
+.content-section {
+  background-color: var(--surface);
+  border: 1px solid var(--border-colour);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Timeline style */
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--border-colour);
+}
+
+.timeline-item {
+  position: relative;
+  padding: 1rem 1rem 1rem 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--primary);
+  border-radius: 50%;
+}
+
+.timeline-item h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Progress bars */
+.progress {
+  height: 1rem;
+  background-color: var(--border-colour);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  background-color: var(--primary);
+}
+
+/* Calendar container */
+#calendar {
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+/* Modal styling */
+.modal-header {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.modal-title {
+  font-weight: 600;
+}
+
+.modal-body {
+  color: var(--text-colour);
+}
+
+/* Checklist styling */
+.checklist {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.checklist li input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: var(--subtle-text);
+  font-size: 0.875rem;
+}
